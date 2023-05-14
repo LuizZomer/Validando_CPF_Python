@@ -1,34 +1,31 @@
-cpf_origin = '988.360.917-50'.split('.')
+cpf = '74682489070'
 
-cpf_sem_ponto = ''.join(cpf_origin)
-
-cpf_lista = cpf_sem_ponto.split('-')
-
-cpf_9dig = cpf_lista[0]
-
-lista_str = []
-
-for numero in cpf_9dig:
-    lista_str.append(numero)
-
-print(lista_str)
+nove_digitos = cpf[:9]
 
 cont = 10
-soma = 0
 
-lista_int = []
+soma_1 = 0
 
-for digito in lista_str:
-    digito_int = int(digito)
-    lista_str.append(digito_int)
+for numero in nove_digitos:
+    soma_1 += int(numero) * cont    
+    cont -=1
 
-for digito in lista_str:
-    mult = 0
-    mult = digito*cont
-    soma+=mult
-    cont-=1
+digito1 = (soma_1 * 10) % 11
 
-print(lista_str)
-print(soma)
+print(digito1)
 
+digito1 = 0 if digito1 > 10 else digito1
 
+dez_digitos = cpf[:10]
+
+soma_2 = 0
+cont_1 = 11
+
+for numero in dez_digitos:
+    soma_2 += int(numero) * cont_1
+    cont -= 1
+digito2 = (soma_2 * 10) % 11
+
+digito2 = 0 if digito2 > 10 else digito2
+
+print(digito2)
