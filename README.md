@@ -1,2 +1,2 @@
-# Validando_CPF_Python
- Validando um CPF com a linguagem python
+#  Gerando e validando CPF com Python
+ gerando e validando  um CPF com a linguagem python
